@@ -6,13 +6,15 @@ import { ShortcutProvider } from './context/ShortcutContext';
 import { GatewayProvider } from './context/GatewayContext';
 import { MobileProvider } from './context/MobileContext';
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 import Scroll from './components/helpers/Scroll';
 
 import Navbar from './components/layouts/navbar/Navbar';
 import Footer from './components/layouts/footer/Footer';
 
 import Home from './pages/home/Home';
-import Services from './pages/services/Services';
 import Portfolio from './pages/portfolio/Portfolio';
 import Company from './pages/company/Company';
 
@@ -25,7 +27,6 @@ function Content() {
 				<Routes>
 					<Route path="/" element={<Navigate to="/home" replace />} />
 					<Route path="/home" element={<Home />} />
-					<Route path="/services" element={<Services />} />
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/company" element={<Company />} />
 				</Routes>
