@@ -1,3 +1,280 @@
 .company {
-    
+	color: #fff;
+	background: #0c0c0f;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.company-hero {
+	text-align: center;
+	padding: 70px 0;
+	background: linear-gradient(180deg, #0d0d3d, #00000e);
+	box-shadow: 0 0 60px rgba(55, 0, 255, 0.1);
+}
+
+.hero-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.hero-title span {
+	color: #4a4aff;
+}
+
+.hero-subtitle {
+	font-size: 1.2rem;
+	max-width: 800px;
+	margin: 0 auto 30px;
+	color: #c3c3c3;
+}
+
+.cta-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+	padding: 12px 24px;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: background 0.3s ease;
+}
+
+.primary-btn {
+	background: linear-gradient(135deg, #4a4aff, #8e7fff);
+	color: white;
+}
+
+.primary-btn:hover {
+	background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.secondary-btn {
+	background: rgba(255, 255, 255, 0.08);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-btn:hover {
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.company-about {
+    max-width: 55%;
+    margin: 0 auto;
+	border-radius: 20px;
+	margin-bottom: 40px;
+    padding-top: 15px;
+}
+
+.company-about,
+.company-values {
+    text-align: center;
+}
+
+.company-about h2 {
+	font-size: 1.5em;
+	color: #1e1e1e;
+	margin-bottom: 20px;
+}
+
+.company-about p {
+	color: #333;
+	line-height: 1.7;
+	margin-bottom: 16px;
+}
+
+.content-heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center */
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+
+.about-intro-card {
+    background: white;
+    padding: 30px;
+    margin: 0 auto 40px auto;
+    max-width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.about-highlight-card {
+    text-align: left;
+	background-color: #ffffff;
+	border-radius: 15px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	padding: 24px;
+	margin-bottom: 30px;
+	color: #333;
+	font-size: 1.05rem;
+	transition: transform 0.3s ease;
+}
+
+.about-cards-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+	margin-top: 20px;
+}
+
+.about-card {
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+	padding: 24px 28px;
+	color: #222;
+	text-align: left;
+	transition: transform 0.3s ease;
+}
+
+.about-card:hover,
+.about-highlight-card:hover {
+	transform: translateY(-5px);
+}
+
+.about-card h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #1e1e1e;
+}
+
+.about-card ul {
+	padding-left: 20px;
+	margin: 0;
+}
+
+.about-card li {
+	margin-bottom: 8px;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: #333;
+}
+
+.about-card p {
+	margin-bottom: 12px;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #444;
+}
+
+.emoji {
+	font-size: 1rem;
+	margin-right: 6px;
+}
+
+.company-values {
+    background: #0f0f13;
+    padding: 80px 20px;
+}
+
+.company-values h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+
+.value-box {
+	background: #1a1a1f;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+.value-box:hover {
+	transform: translateY(-5px);
+}
+
+.value-box p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.value-box h3 {
+	color: #7a78ff;
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+}
+
+
+
+/* Waves */
+#waves-container2 {
+	position: relative;
+	height: 310px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.heading-container {
+	position: absolute;
+	text-align: center;
+	color: white;
+	z-index: 2;
+}
+
+.heading-text {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.heading-underline {
+	width: 60px;
+	height: 4px;
+	background: #4a4aff;
+	margin: 10px auto 0;
+	border-radius: 5px;
+}
+
+#waveCanvas1,
+#waveCanvas2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
+
+.company-content-container {
+	margin: 0 auto;
+	background: #f9f9f9;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
