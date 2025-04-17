@@ -24,7 +24,7 @@ body, html {
     line-height: normal;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(23, 24, 28, 1);
+    background: linear-gradient(-135deg, rgb(9, 0, 135) 25%, rgb(147, 64, 255) 100%);
 }
 
 button {
@@ -35,7 +35,7 @@ button {
 }
 
 .button.primary {
-    background: linear-gradient(180deg, #5aff08, #5aff08);
+    background: linear-gradient(180deg, rgb(9, 0, 135), rgb(147, 64, 255));
     color: #fff;
 }
 
@@ -91,7 +91,7 @@ button {
     background-color: rgba(4, 5, 6, 0.35);
 }
 .section.alternate {
-	background: linear-gradient(180deg, #5aff08, #43bb06);
+	background: linear-gradient(180deg, rgb(147, 64, 255), rgb(9, 0, 135));
 }
 .section-content {
     align-self: stretch;
@@ -129,7 +129,7 @@ button {
     position: relative;
     letter-spacing: -0.03em;
     line-height: 117.7%;
-    color: #5aff08;
+    color: rgb(161, 90, 253);
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -288,5 +288,5 @@ button {
     transition: color 0.3s ease-in-out;
 }
 .hover-effect:hover {
-    color: #5bff09;
+    color: rgb(147, 64, 255);
 }
