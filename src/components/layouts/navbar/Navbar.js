@@ -33,9 +33,8 @@ const Navbar = () => {
 			<div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
 				{/* Logo */}
 				<div className="navbar-left">
-					<Link to={`/`} className="navbar-logo-container">
+				<Link to={`/`} className="navbar-logo-container">
 						<img className="navbar-logo-icon" alt="Corey Black logo" src={logo} width={40} height={40} />
-						<div className="navbar-logo-text">Corey Black</div>
 					</Link>
 				</div>
 
@@ -49,13 +48,6 @@ const Navbar = () => {
 
 				{/* CTA Button */}
 				<div className="navbar-right">
-					<div className="navbar-cta-desktop">
-						<MainButton
-							text="Begin your journey"
-							onClick={() => setShowConnect(true)}
-							variant="primary"
-						/>
-					</div>
 					<div className="navbar-cta-mobile">
 						<LucideButton
 							className="navbar-cta-mobile"
