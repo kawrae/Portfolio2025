@@ -31,15 +31,16 @@ const Navbar = () => {
 	return (
 		<>
 			<div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-				{/* Logo */}
+
 				<div className="navbar-left">
-				<Link to={`/`} className="navbar-logo-container">
-						<img className="navbar-logo-icon" alt="Corey Black logo" src={logo} width={40} height={40} />
-					</Link>
+					
 				</div>
 
 				{/* Nav Links */}
 				<div className={`navbar-centre ${menuOpen ? 'active' : ''}`}>
+					<Link to={`/`} className="navbar-logo-container">
+						<img className="navbar-logo-icon" alt="Corey Black logo" src={logo} width={40} height={20} />
+					</Link>
 					<Link to={`/services`} className={`navitem-text hover-effect ${location.pathname === '/blog' ? 'selected' : ''}`} onClick={handleNavClick}>Blog</Link>
 					<Link to={`/services`} className={`navitem-text hover-effect ${location.pathname === '/services' ? 'selected' : ''}`} onClick={handleNavClick}>About</Link>
 					<Link to={`/portfolio`} className={`navitem-text hover-effect ${location.pathname === '/portfolio' ? 'selected' : ''}`} onClick={handleNavClick}>Portfolio</Link>
