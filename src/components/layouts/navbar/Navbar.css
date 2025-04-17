@@ -5,14 +5,14 @@
     /* background-color: #17181c; */
     border-bottom: 1px solid #2e2e32;
     box-sizing: border-box;
-    height: 60px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0px 88px;
     text-align: left;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 143.7%;
     letter-spacing: -0.04em;
     color: #fff;
@@ -29,15 +29,6 @@
 	background-color: #17181c;
 	border-bottom: 1px solid #2e2e32;
 }
-
-.navbar-left {
-    align-self: stretch;
-    width: 250px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
 .navbar-centre {
     align-self: stretch;
     display: flex;
@@ -46,28 +37,14 @@
     justify-content: flex-start;
     gap: 20px;
 }
-.navbar-right {
-    align-self: stretch;
-    width: 250px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
-}
 
 .navbar-logo-container {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
 }
 .navbar-logo-icon {
   display: block;
   width: 40px;
-  height: 40px;
-  object-fit: contain;
+  height: 30px;
 }
 
 .navbar-logo-text {
