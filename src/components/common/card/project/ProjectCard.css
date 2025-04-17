@@ -1,0 +1,80 @@
+.project-card {
+  width: 100%;
+  max-width: 382px;
+  border-radius: 15px;
+  background: linear-gradient(180deg, #22242a, #1d1e23 33%, #1a1b20 66%, #17181c);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-media {
+	width: 100%;
+  /*aspect-ratio: 4 / 3;*/ /* Dribbble */
+  /*aspect-ratio: 1 / 1;*/ /* Instagram */
+  aspect-ratio: 16 / 9; /* 1920 x 1080 */
+	object-fit: cover;
+	border-radius: 12px 12px 0 0;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.13); */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-media {
+  transform: scale(1.03);
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 16px;
+  gap: 10px;
+  height: 100%;
+}
+
+.project-owner {
+  color: #a0a0a0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.project-description {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f2f2f2;
+  letter-spacing: -0.014em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.project-footer {
+  margin-top: auto;
+}
+
+.project-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-buttons.one-button {
+	justify-content: flex-end;
+}
+
+.project-buttons.two-buttons {
+	justify-content: space-between;
+}

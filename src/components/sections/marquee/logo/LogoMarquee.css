@@ -1,0 +1,21 @@
+.marquee-container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.marquee {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-image {
+    height: 50px;
+    margin: 0 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.logo-image:hover {
+    filter: grayscale(0%);
+}
+  

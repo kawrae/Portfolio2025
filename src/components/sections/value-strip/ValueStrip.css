@@ -1,0 +1,54 @@
+.value-strip {
+	width: 100%;
+	background-color: #17181c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	padding: 30px 50px;
+	box-sizing: border-box;
+
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	letter-spacing: -0.45px;
+	line-height: 1.5;
+	color: #fff;
+
+	flex-wrap: nowrap;
+	overflow-x: hidden; /* desktop only */
+}
+
+.value {
+  	white-space: nowrap;
+}
+
+.separator {
+  	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.value-strip {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: flex-start; /* 🔥 Align left so it can scroll */
+	  overflow-x: auto;
+	  white-space: nowrap;
+	  padding: 20px;
+	  gap: 20px;
+	  scrollbar-width: none; /* Firefox */
+	}
+  
+	.value-strip::-webkit-scrollbar {
+	  display: none; /* Chrome/Safari */
+	}
+  
+	.separator {
+	  display: none;
+	}
+  
+	.value {
+	  flex-shrink: 0;
+	}
+  }
+  

@@ -1,0 +1,168 @@
+body {
+  background-color: #17181c;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Poppins',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes moveBackgroundDiagonal {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes moveBackgroundDown {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 15% 100%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* a:hover .hover-effect {
+  color: #00deff;
+} */
+
+.background-gradient {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to bottom, black, #121212, black);
+  /* background: linear-gradient(to bottom, #002763, #00c3ff, #015eea); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+.background-pattern {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #252525;
+}
+
+.background-pattern::before {
+  content: "";
+  position: absolute;
+  top: -50%; 
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('./assets/images/backgrounds/pattern_dark.png');
+  background-repeat: repeat;
+  background-size: auto;
+  transform: rotate(-30deg); 
+  animation: moveBackgroundDown 60s linear infinite;
+}
+
+.line-split {
+  background: white;
+}
+
+.line-split.top,
+.line-split.bottom {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+}
+
+.line-split.top {
+  left: 0;
+  top: 0;
+}
+
+.line-split.bottom {
+  left: 0;
+  top: 100%;
+}
+
+.line-split.vertical {
+  width: 1px;
+  height: 100vh;
+}
+
+.line-split.horizontal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+}
+
+.button {
+  background: white;
+  color: black;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 40px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.1s ease;
+}
+
+.button:hover {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .background-pattern {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .background-pattern::before {
+    top: -100%; 
+    left: -100%;
+    width: 250%;
+    height: 250%;
+  }
+}

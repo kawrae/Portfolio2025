@@ -1,0 +1,123 @@
+.quote-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.quote-inner {
+	display: flex;
+	align-items: center;
+	max-width: 1050px;
+	width: 100%;
+	gap: 80px;
+	position: relative;
+}
+
+.quote-image-wrap {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	flex-shrink: 0;
+	overflow: visible;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quote-portrait {
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	border: 5px solid var(--color-electric-blue-light);
+	object-fit: cover;
+	position: relative;
+	z-index: 2;
+}
+
+.quote-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: white;
+	position: relative;
+}
+
+.quote-mark {
+	font-size: 200px;
+	color: #9c9fa1;
+	line-height: 0;
+	position: absolute;
+	top: 65px;
+	left: -35px;
+	z-index: 0;
+	opacity: 0.25;
+	pointer-events: none;
+}
+
+.quote-message {
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: 500;
+	position: relative;
+	z-index: 1;
+}
+
+.quote-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.quote-author {
+	font-weight: 600;
+}
+
+.quote-nav {
+	display: flex;
+	gap: 16px;
+}
+
+.quote-social {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	gap: 16px;
+	margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	.quote-inner {
+		flex-direction: column;
+		gap: 40px;
+		align-items: center;
+		text-align: center;
+	}
+
+	.quote-image-wrap {
+		width: 200px;
+		height: 200px;
+	}
+
+	.quote-mark {
+		font-size: 100px;
+		top: 40px;
+		left: -15px;
+	}
+
+	.quote-message {
+		font-size: 14px;
+	}
+
+	.quote-bottom {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.quote-nav {
+		justify-content: center;
+	}
+}

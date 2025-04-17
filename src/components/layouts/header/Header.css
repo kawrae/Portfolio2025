@@ -1,0 +1,31 @@
+.header-content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 350px;
+    gap: 25px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+      padding: 0 20px;
+      gap: 20px;
+    }
+  
+    .text-title {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  
+    .text-description {
+      font-size: 16px;
+    }
+  
+    .cta-button-row {
+      gap: 10px;
+    }
+  }
+  

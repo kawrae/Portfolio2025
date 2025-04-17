@@ -1,0 +1,20 @@
+.placeholder {
+    width: 100%;
+    position: relative;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 25px 25px 0px;
+    box-sizing: border-box;
+}
+.viewport {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    background-color: #000;
+    overflow: hidden;
+}

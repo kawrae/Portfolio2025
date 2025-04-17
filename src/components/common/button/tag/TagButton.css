@@ -1,0 +1,28 @@
+.tag-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--color-border);
+    background-color: #1c1e24;
+    color: white;
+    white-space: nowrap;
+    width: auto;
+    max-width: 100%;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out; 
+}
+
+.tag-button:hover {
+    border-color: var(--color-primary);
+}
+
+.tag-button span {
+    white-space: nowrap;
+}
+
+.tag-button img {
+    margin-left: 10px;
+    flex-shrink: 0;
+}

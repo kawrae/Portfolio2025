@@ -1,0 +1,199 @@
+.footer {
+    width: 100%;
+    position: relative;
+    background-color: #17181c;
+    /* border-top: 1px solid #2e2e32; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    font-family: Montserrat;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-primary-section {
+    align-self: stretch;
+    border-top: 1px solid #2e2e32;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px 108px;
+    text-align: left;
+    font-size: 10px;
+    color: #5bff09;
+}
+.footer-primary-content {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 32px 0px;
+}
+.footer-primary-top {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 64px;
+}
+.footer-primary-column-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap; /* Always side-by-side */
+    width: 100%;
+}  
+
+.footer-logo {
+    width: 100px;
+    height: 64px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.footer-primary-top-lower {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.footer-primary-row-list-item {
+    position: relative;
+    line-height: 140%;
+}
+.footer-primary-row-list {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 14px;
+    color: #f2f2f2;
+    font-family: Poppins;
+    font-weight: 300;
+}
+.design-rush-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.design-rush-image {
+    width: 100px;
+    position: relative;
+    height: 133.6px;
+    object-fit: cover;
+}
+
+.footer-primary-bottom {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: right;
+    color: #f2f2f2;
+}
+.footer-primary-bottom-copyright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+}
+.footer-primary-bottom-text-1 {
+    position: relative;
+    line-height: 140%;
+    opacity: 0.4;
+}
+.footer-primary-bottom-text-2 {
+    position: relative;
+    font-size: 9px;
+    line-height: 140%;
+    opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .footer-primary-section {
+    padding: 30px 20px;
+    align-items: center;
+  }
+
+  .footer-primary-column-container {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  /* .column {
+    text-align: left;
+  } */
+
+  .footer-logo {
+    margin: 20px 0;
+    /* width: 80px; */
+    height: auto;
+    /* display: none; */
+  }
+
+  .footer-primary-top-lower {
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    margin-top: -50px;
+    /* background: red; */
+    /* margin-top: 30px; */
+  }
+
+  .design-rush-container {
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .design-rush-image {
+    width: 80px;
+    height: auto;
+  }
+
+  .footer-primary-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 5px;
+    margin-top: 30px;
+  }
+
+    .footer-primary-bottom-copyright-container {
+        margin-top: 15px;
+        align-items: flex-start;
+    }
+
+  .footer-primary-bottom-text-1,
+  .footer-primary-bottom-text-2 {
+    font-size: 10px;
+    opacity: 0.5;
+  }
+}

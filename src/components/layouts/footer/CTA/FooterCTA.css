@@ -1,0 +1,50 @@
+.footer-cta-section {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 75px 25px;
+}
+.footer-cta-section-card {
+    width: 1216px;
+    position: relative;
+    border-radius: 24px;
+    background-color: #22242a;
+    height: 281.6px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.footer-cta-section-card-content {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.footer-cta-section-card-content-title {
+    position: relative;
+    letter-spacing: -0.03em;
+    line-height: 100%;
+}
+.footer-cta-section-card-content {
+    z-index: 1; /* On top of illustration */
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.community-illustration {
+    position: absolute;
+    right: 25px;
+    object-fit: cover;
+    max-height: 100%;
+    z-index: 0; /* Behind content */
+}
