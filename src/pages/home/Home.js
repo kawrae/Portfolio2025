@@ -25,7 +25,7 @@ const Home = () => {
         <div className="home-page">
             <R3F />
             <ValueStrip values={services} />
-            <FeaturedProjects />
+            {/* <FeaturedProjects /> */}
             <div id="testimonials">
                 <QuoteCarousel entries={clientQuotes} />
             </div>
