@@ -9,6 +9,7 @@ import LucideButton from '../../common/button/lucide/LucideButton';
 import ConnectModal from '../../layouts/modal/connect/ConnectModal';
 
 import logo from '../../../assets/images/logo/logo.png';
+import ii from '../../../assets/images/logo/ii.png';
 
 const Navbar = () => {
 	const location = useLocation();
@@ -33,7 +34,7 @@ const Navbar = () => {
 			<div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
 
 				<div className="navbar-left">
-					
+
 				</div>
 
 				{/* Nav Links */}
@@ -43,6 +44,15 @@ const Navbar = () => {
 					</Link>
 					<Link to={`/portfolio`} className={`navitem-text hover-effect ${location.pathname === '/portfolio' ? 'selected' : ''}`} onClick={handleNavClick}>Portfolio</Link>
 					<Link to={`/company`} className={`navitem-text hover-effect ${location.pathname === '/company' ? 'selected' : ''}`} onClick={handleNavClick}>Company</Link>
+					<a
+						href="https://dev.infinitusinteractive.com/home"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="navbar-logo-container"
+					>
+						<img className="navbar-logo-icon-infinitus" alt="Infinitus Interactive logo" src={ii} width={40} height={20} />
+					</a>
+
 				</div>
 
 				{/* CTA Button */}
