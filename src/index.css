@@ -46,9 +46,9 @@ a {
   color: inherit;
 }
 
-/* a:hover .hover-effect {
-  color: #00deff;
-} */
+a:hover .hover-effect {
+  color: #5bff09;
+}
 
 .background-gradient {
   position: relative;
