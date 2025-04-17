@@ -199,23 +199,21 @@ const Portfolio = () => {
 											<div className="tile-tags">
 												{isFourth ? (
 													<>
-														<span className="badge">React</span>
-														<span className="badge">JavaScript</span>
-														<span className="badge">CSS</span>
+														<span className="badge badge-react">React</span>
+														<span className="badge badge-javascript">JavaScript</span>
+														<span className="badge badge-css">CSS</span>
 													</>
 												) : isThird ? (
 													<>
-														<span className="badge">HTML</span>
-														<span className="badge">CSS</span>
-														<span className="badge">JavaScript</span>
-														<span className="badge">Bootstrap</span>
+														<span className="badge badge-javascript">JavaScript</span>
+														<span className="badge badge-css">CSS</span>
+														<span className="badge badge-bootstrap">Bootstrap</span>
 													</>
 												) : (
 													<>
-														<span className="badge">PHP</span>
-														<span className="badge">MySQL</span>
-														<span className="badge">JavaScript</span>
-														{isSecond && <span className="badge">jQuery</span>}
+														<span className="badge badge-javascript">JavaScript</span>
+														<span className="badge badge-php">PHP</span>
+														<span className="badge badge-mysql">MySQL</span>
 													</>
 												)}
 											</div>
@@ -228,7 +226,7 @@ const Portfolio = () => {
 																? 'https://github.com/kawrae/Portfolio2024'
 																: isSecond
 																	? 'https://github.com/kawrae/wst-project'
-																	: 'https://github.com/kawrae/wst-project/blob/main/scripts/terminal.js'
+																	: 'https://github.com/kawrae/wst-project/blob/main/terminal_api.php'
 													}
 													target="_blank"
 													rel="noreferrer"

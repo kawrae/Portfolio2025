@@ -1,67 +1,67 @@
 .build-card-style {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    padding: 24px;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-  }
+	background-color: #ffffff;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+	padding: 24px;
+	margin-bottom: 30px;
+	transition: transform 0.3s ease;
+}
 
-  h3 {
-    color: black;
-    font-weight: 600;
-  }
-  
-  .build-card-style:hover {
-    transform: translateY(-5px);
-  }
-  
-  .release-date {
-    color: #6c6c6c;
-    margin-top: 5px;
-  }
-  
-  .release-date-highlight {
-    color: #4a4aff;
-    font-weight: 600;
-  }
-  
-  .meta {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px 0;
-    font-weight: 500;
-  }
+h3 {
+	color: black;
+	font-weight: 600;
+}
 
-  .meta-tag {
-    background-color: #f0f0f0;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .build-image {
-    width: 100%;
-    margin: 15px 0;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-  
-  .btn-download i {
-    margin-right: 10px;
-  }
-  
-  .btn-download:hover {
-    background: #2859c9;
-  }
-  
-  .builds-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+.build-card-style:hover {
+	transform: translateY(-5px);
+}
+
+.release-date {
+	color: #6c6c6c;
+	margin-top: 5px;
+}
+
+.release-date-highlight {
+	color: #4a4aff;
+	font-weight: 600;
+}
+
+.meta {
+	display: flex;
+	justify-content: space-between;
+	margin: 16px 0;
+	font-weight: 500;
+}
+
+.meta-tag {
+	background-color: #f0f0f0;
+	padding: 6px 14px;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: #333;
+}
+
+.build-image {
+	width: 100%;
+	margin: 15px 0;
+	border-radius: 12px;
+	object-fit: cover;
+}
+
+.btn-download i {
+	margin-right: 10px;
+}
+
+.btn-download:hover {
+	background: #2859c9;
+}
+
+.builds-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	gap: 30px;
+	margin-top: 20px;
 }
 
 .portfolio-download-section {
@@ -77,30 +77,30 @@
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: 40px;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
 .underline {
-    width: 60px;
-    height: 4px;
-    margin: 0 auto;
-    background: #4a4aff;
-    border: none;
-    border-radius: 5px;
+	width: 60px;
+	height: 4px;
+	margin: 0 auto;
+	background: #4a4aff;
+	border: none;
+	border-radius: 5px;
 }
 
 .portfolio-page {
-    font-family: Montserrat;
+	font-family: Montserrat;
 }
 
 .portfolio-hero {
-    width: 100%;
-    position: relative;
-    padding: 100px 200px 50px;
-    box-sizing: border-box;
-    text-align: center;
-    color: #fff;
+	width: 100%;
+	position: relative;
+	padding: 100px 200px 50px;
+	box-sizing: border-box;
+	text-align: center;
+	color: #fff;
 }
 
 .colored-bar {
@@ -109,66 +109,67 @@
 	background-color: #1e3deb;
 	margin-right: 10px;
 	border-radius: 4px;
-    display: inline-block;
-    margin-top: 17px;
+	display: inline-block;
+	margin-top: 17px;
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    padding: 60px 40px;
-    max-width: 1440px;
-    margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 24px;
+	padding: 60px 40px;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .focus-card {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    padding: 24px;
-    text-align: center;
-    transition: transform 0.3s ease;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+	padding: 24px;
+	text-align: center;
+	transition: transform 0.3s ease;
 }
 
 .focus-card:hover {
-    transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 .focus-card .icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 15px;
+	width: 40px;
+	height: 40px;
+	margin-bottom: 15px;
 }
 
 .btn-download {
-    margin-top: 20px;
-    background: linear-gradient(-135deg,rgb(73,164,255) 25%,rgb(0,116,231) 100%);
-    color: white;
-    padding: 10px 20px;
-    font-weight: 500;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    border: 2px solid rgb(255 255 255 / 20%);
+	margin-top: 20px;
+	background: linear-gradient(-135deg, rgb(73, 164, 255) 25%, rgb(0, 116, 231) 100%);
+	color: white;
+	padding: 10px 20px;
+	font-weight: 500;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	border: 2px solid rgb(255 255 255 / 20%);
 }
 
 .btn-download:hover {
-    background: linear-gradient(-135deg,rgb(46,204,113) 25%,rgb(26,188,156) 100%);
+	background: linear-gradient(-135deg, rgb(46, 204, 113) 25%, rgb(26, 188, 156) 100%);
 }
 
 .builds-container {
-    margin: 0px auto;
+	margin: 0px auto;
 }
 
 @media (max-width: 768px) {
-    .builds-container {
-      padding: 20px;
-      margin: 20px auto;
-    }
-  }
-  @media (max-width: 768px) {
+	.builds-container {
+		padding: 20px;
+		margin: 20px auto;
+	}
+}
+
+@media (max-width: 768px) {
 	.portfolio-content-container {
 		padding: 30px 20px;
 	}
@@ -216,10 +217,6 @@
 	z-index: 1;
 }
 
-.content-heading {
-	display: flex;
-	align-items: center;
-}
 
 .nbj-dev-card {
 	width: 100%;
@@ -233,11 +230,11 @@
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 	margin: 30px 0;
 	box-sizing: border-box;
-    transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .nbj-dev-card:hover {
-    transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 .nbj-dev-icon {
@@ -253,10 +250,11 @@
 }
 
 .nbj-dev-heading {
-	font-size: 20px;
+	font-size: 24px;
 	color: #6366f1;
 	font-weight: 700;
 	margin-bottom: 8px;
+	margin-top: 0;
 }
 
 .nbj-dev-btn {
@@ -269,11 +267,11 @@
 	text-decoration: none;
 	transition: all 0.3s ease;
 	white-space: nowrap;
-    border: 2px solid rgb(255 255 255 / 20%);
+	border: 2px solid rgb(255 255 255 / 20%);
 }
 
 .nbj-dev-btn:hover {
-	background: linear-gradient(-135deg,rgb(46,204,113) 25%,rgb(26,188,156) 100%);
+	background: linear-gradient(-135deg, rgb(46, 204, 113) 25%, rgb(26, 188, 156) 100%);
 	box-shadow: 0 5px 15px rgba(74, 0, 224, 0.5);
 }
 
@@ -358,7 +356,37 @@
 	border-radius: 12px;
 	font-size: 0.8rem;
 	color: #fff;
-    border: 1px solid rgb(255 255 255 / 20%);
+	font-weight: 600;
+}
+
+/* CSS */
+.badge-css {
+	border: 1.5px solid rgb(4, 63, 173);
+}
+
+/* JavaScript */
+.badge-javascript {
+	border: 1.5px solid rgb(167, 170, 2);
+}
+
+/* React */
+.badge-react {
+	border: 1.5px solid rgb(154, 3, 255)
+}
+
+/* Bootstrap */
+.badge-bootstrap {
+	border: 1.5px solid rgb(79, 8, 192);
+}
+
+/* PHP */
+.badge-php {
+	border: 1.5px solid rgb(57, 50, 151);
+}
+
+/* MySQL */
+.badge-mysql {
+	border: 1.5px solid rgb(148, 85, 3);
 }
 
 .btn-demo {
@@ -372,37 +400,37 @@
 	text-align: center;
 	text-decoration: none;
 	transition: background 0.3s ease;
-    border: 1px solid rgb(255 255 255 / 20%);
+	border: 1px solid rgb(255 255 255 / 20%);
 
 }
 
 .btn-demo:hover {
-	background: linear-gradient(-135deg,rgb(46,204,113) 25%,rgb(26,188,156) 100%);
+	background: linear-gradient(-135deg, rgb(46, 204, 113) 25%, rgb(26, 188, 156) 100%);
 }
 
 .build-carousel {
-    width: 100%;
-    margin: 15px 0;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #b1b3be;
-    font-size: 18px;
-    width: 30px;
-    height: 30px;
-    transform: scale(0.75);
-  }
+	width: 100%;
+	margin: 15px 0;
+	border-radius: 12px;
+	overflow: hidden;
+}
 
-  .windows-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
+.swiper-button-prev,
+.swiper-button-next {
+	color: #b1b3be;
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	transform: scale(0.75);
+}
+
+.windows-icon {
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
 	.nbj-dev-card {
