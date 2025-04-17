@@ -74,14 +74,12 @@ const ConnectModal = ({ onClose, defaultMessage = '' }) => {
 	return (
 		<div className="modal-overlay">
 			<div className="connect-form">
-				{/* <button className="close-button" onClick={onClose}>×</button> */}
 				<div className="close-button">
 					<IconButton  onClick={onClose} image={closeIcon} imageAlt={"Close"} buttonSize={40} iconSize={10} />
 				</div>				
 				<div className="form">
 					<div className="intro">
-						<span className="label">CONNECT WITH US</span>
-						<h3>
+						<h3 style={{ color: '#7c72ea' }}>
 							Are you ready for the next step?<br />
 							<span className="highlight">Your journey starts here</span>
 						</h3>

@@ -35,7 +35,7 @@
   }
   
   .label {
-    color: #00deff;
+    color: #7c72ea;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -90,7 +90,7 @@
   }
   
   .form-success {
-    color: #00deff;
+    color: #5900ff;
     font-size: 0.95rem;
     margin-top: 10px;
     text-align: right;
