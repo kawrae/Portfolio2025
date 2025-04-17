@@ -32,6 +32,15 @@
     margin: 16px 0;
     font-weight: 500;
   }
+
+  .meta-tag {
+    background-color: #f0f0f0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+  }
   
   .build-image {
     width: 100%;
@@ -267,6 +276,108 @@
 	background: linear-gradient(-135deg,rgb(46,204,113) 25%,rgb(26,188,156) 100%);
 	box-shadow: 0 5px 15px rgba(74, 0, 224, 0.5);
 }
+
+.full-width-web {
+	width: 100%;
+	background: #121212;
+	padding: 40px 5vw;
+	color: #fff;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+
+.project-gallery-inner {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.gallery-subtext {
+	font-size: 1rem;
+	color: #bdbdbd;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 40px;
+}
+
+.project-tile {
+	background: #1e1e1e;
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+	transform: translateY(-5px);
+}
+
+.tile-image {
+	width: 100%;
+	object-fit: cover;
+}
+
+.tile-content {
+	padding: 20px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.tile-title {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #fff;
+	margin: 10px 0;
+}
+
+.tile-subtitle {
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: #a0a0a0;
+}
+
+.tile-tags {
+	margin-top: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.badge {
+	background: #2d2d2d;
+	padding: 6px 12px;
+	border-radius: 12px;
+	font-size: 0.8rem;
+	color: #fff;
+    border: 1px solid rgb(255 255 255 / 20%);
+}
+
+.btn-demo {
+	display: inline-block;
+	background: #00d2ff;
+	background: linear-gradient(135deg, #00d2ff 0%, #3a47d5 100%);
+	color: white;
+	font-weight: 600;
+	padding: 12px 18px;
+	border-radius: 30px;
+	text-align: center;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+.btn-demo:hover {
+	background: linear-gradient(-135deg,rgb(46,204,113) 25%,rgb(26,188,156) 100%);
+}
+
 
 /* Responsive styling */
 @media (max-width: 768px) {
