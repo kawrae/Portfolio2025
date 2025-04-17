@@ -17,7 +17,7 @@
 
 /* === VARIANTS === */
 .main-button.primary {
-	background: linear-gradient(180deg, #5aff08, #43bb06);
+	background: linear-gradient(-135deg,rgb(93, 46, 204) 25%,rgb(137, 26, 188) 100%);
 	color: #fff;
 }
 
