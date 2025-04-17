@@ -3,7 +3,7 @@
     position: sticky;
     top: 0;
     /* background-color: #17181c; */
-    border-bottom: 1px solid #2e2e32;
+    border-bottom: 1px solid rgb(255 255 255 / 18%);
     box-sizing: border-box;
     height: 70px;
     display: flex;
@@ -18,16 +18,16 @@
     color: #fff;
     font-family: Montserrat;
     z-index: 999;
-
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
     background-color: transparent;
-    border-bottom: 1px solid transparent;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-135deg, rgba(0, 42, 135, 0.8) 25%, rgba(120, 46, 218, 0.8) 100%);
 }
 
 .navbar.scrolled {
-	background-color: #17181c;
-	border-bottom: 1px solid #2e2e32;
+	border-bottom: 1px solid rgb(255 255 255 / 18%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .navbar-centre {
     align-self: stretch;
@@ -41,10 +41,15 @@
 .navbar-logo-container {
     align-items: center;
 }
+
+.navbar-logo-container:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(98%) saturate(1542%) hue-rotate(241deg) brightness(100%) contrast(96%);
+}
+
 .navbar-logo-icon {
   display: block;
   width: 40px;
-  height: 30px;
+  height: 25px;
 }
 
 .navbar-logo-text {
@@ -62,7 +67,7 @@
 
 .navbar-cta.container {
     border-radius: 94.01px;
-    background: linear-gradient(180deg, #5bff09, #42bc05);
+    background: linear-gradient(180deg, rgb(147, 64, 255), rgb(9, 0, 135));
     height: 40px;
     overflow: hidden;
     display: flex;
@@ -89,7 +94,7 @@
   .navbar-hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff; /* or your colour */
+    background-color: #fff;
     margin: 4px 0;
     transition: 0.4s;
   }
