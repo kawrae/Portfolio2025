@@ -1,109 +1,115 @@
 import React from 'react';
+import nbj1 from '../../assets/images/showcase/nbj1.png';
+import game2 from '../../assets/images/showcase/game2.png';
+import useWaveAnimation from '../../hooks/useWaveAnimation.js';
+import gamepadIcon from '../../assets/images/other/gamepad.png';
 import './Portfolio.css';
 
-import { useConnectModal } from '../../context/ConnectModalContext';
-import { useShortcut } from '../../context/ShortcutContext';
-import { useGateway } from '../../context/GatewayContext';
-import { useMobile } from '../../context/MobileContext';
-
-import { HeroPrimary, HeroTertiary } from '../../components/layouts/hero/Hero';
-import Overview from '../../components/sections/overview/Overview';
-import CallToAction from '../../components/layouts/call-to-action/CallToAction';
-import ItemGallery from '../../components/sections/item-gallery/ItemGallery';
-
-import featureImage from '../../assets/images/hero/solutions.png';
-import dataInsightsIcon from '../../assets/icons/pie.svg';
-import maintenanceIcon from '../../assets/icons/chart_success.svg';
-import efficiencyIcon from '../../assets/icons/coffee.svg';
-import visualistionsIcon from '../../assets/icons/box_dashed.svg';
-import engagementIcon from '../../assets/icons/users.svg';
-import dataIntegrationIcon from '../../assets/icons/share.svg';
-import riskSafetyIcon from '../../assets/icons/danger.svg';
-import scalabilityIcon from '../../assets/icons/sun.svg';
-import costSavingsIcon from '../../assets/icons/money.svg';
-
-const overviewItems = [
-	{ icon: dataInsightsIcon, title: "Data Insights", description: "Monitor operations with real-time, actionable data" },
-	{ icon: maintenanceIcon, title: "Maintenance", description: "Prevent downtime with smart, predictive alerts" },
-	{ icon: efficiencyIcon, title: "Efficiency", description: "Streamline processes to boost productivity" },
-	{ icon: visualistionsIcon, title: "Visualisations", description: "Engage with interactive 3D product displays" },
-	{ icon: engagementIcon, title: "Engagement", description: "Increase engagement with immersive apps" },
-	{ icon: dataIntegrationIcon, title: "Data Integration", description: "Connect all your data for full system visibility" },
-	{ icon: riskSafetyIcon, title: "Risk & Safety", description: "Stay compliant with real-time safety alerts" },
-	{ icon: scalabilityIcon, title: "Scalability", description: "Adapt and grow with scalable solutions" },
-	{ icon: costSavingsIcon, title: "Cost Savings", description: "Maximise ROI and lower costs with insights" }
+const builds = [
+	{
+		title: 'NBJ Horror Story',
+		releaseDate: '10-02-2024',
+		version: '1.0.0',
+		size: '1023.3 MB',
+		description:
+			'Horror Game Alpha V1.0 is an immersive first-person horror experience built in Unity and C#. Explore eerie environments, encounter jumpscares, and navigate through dark, atmospheric levels in this alpha release.',
+		image: nbj1,
+		link: '#'
+	},
+	{
+		title: 'NBJ Free Roam',
+		releaseDate: '15-12-2023',
+		version: '0.1.0',
+		size: '519.7 MB',
+		description:
+			'Free Roam Game Project is an open-world prototype focused on car physics, player movement, and exploration. Inspired by the Grand Theft Auto series, it offers a realistic sandbox for driving and interaction.',
+		image: game2,
+		link: '#'
+	}
 ];
 
 const Portfolio = () => {
-	const { openModal } = useConnectModal();
-	const { shortcutToWork } = useShortcut();
-	const { projects } = useGateway();
-	const { isMobile } = useMobile();
-
+	useWaveAnimation();
 	return (
-		<div className="products-page">
-			{isMobile ? (
-				<HeroPrimary 
-					subtitle={"EXPERT SOLUTIONS"}
-					titleBeforeBold={"Unlock the power of"}
-					boldTitle={"immersive technology"}
-					description={"Explore tailored solutions in augmented reality and digital twins that transform industries and drive business growth."}
-					primaryAction={{
-						text: "Begin your journey",
-						onClick: () => openModal()
-					}}
-					secondaryAction={{
-						text: "Explore our work",
-						onClick: () => shortcutToWork()
-					}}
-				/>
-			) : (
-				<HeroTertiary 
-					title={"Portfolio highlights"}
-					subtitle={"POWERED BY INFINITUS"}
-					description={"A curated selection of our most impactful digital solutions — blending innovation, interactivity, and industry expertise."}
-					videoUrl={"https://www.youtube.com/watch?v=IUohllIyWQ0&list=PLxWegkT2PuTJYtja0YBdfYwd3bAzlBlsU&ab_channel=InfinitusInteractive"}
-					primaryAction={{
-						text: "Begin your journey",
-						onClick: () => openModal()
-					}}
-					secondaryAction={{
-						text: "Explore our work",
-						onClick: () => shortcutToWork()
-					}}
-				/>
-			)}
-			{/* {!isMobile && (
-				<Overview 
-					titleBeforeBold={"Transform your business with"}
-					boldTitle={"custom-built solutions"}
-					description={"At Infinitus Interactive, we create tailored solutions in augmented reality and digital twins, developed in collaboration with industry leaders."}
-					actionButton={{
-						text: "Begin your journey",
-						onClick: () => openModal()
-					}}
-					rowOne={overviewItems.slice(0, 3)}
-					rowTwo={overviewItems.slice(3, 6)}
-					rowThree={overviewItems.slice(6, 9)}
-				/>
-			)} */}
-			<div id="work">
-				<ItemGallery
-					titleBeforeBold={"Explore our"}
-					boldTitle={"work"}
-					description={"Discover how we turn complex problems into interactive solutions."}
-					items={projects}
-					searchPlaceholder={"Search products (e.g. digital twins)"}
-				/>
+		<>
+			<div id="waves-container2">
+				<div className="heading-container">
+					<h1 className="heading-text pt-5" id="main-text">Portfolio</h1>
+					<div className="heading-underline" id="sub-text"></div>
+				</div>
+				<canvas id="waveCanvas1"></canvas>
+				<canvas id="waveCanvas2"></canvas>
 			</div>
-			<CallToAction 
-				titleBeforeBold={"Begin your"}
-				boldTitle={"journey"}
-				titleAfterBold={"today"}
-				description={"Wherever your journey leads, we’ll provide the solutions to help you succeed."}
-			/>
-		</div>
-	)
+
+			<div className="portfolio-download-section">
+				<div className="portfolio-content-container">
+					<section className="latest-builds">
+						<div className="content-heading">
+							<span className="colored-bar"></span>
+							<h2 style={{ marginBottom: '0px' }}>Latest Builds</h2>
+						</div>
+
+						{/* Game Development Projects Card*/}
+						<div className="nbj-dev-card">
+							<img
+								src={gamepadIcon}
+								alt="Gamepad Icon"
+								className="nbj-dev-icon"
+							/>
+							<div className="nbj-dev-content">
+								<h3 className="nbj-dev-heading">
+									<i className="fas fa-code"></i> Game Development Projects
+								</h3>
+								<p>
+									These game development projects showcase my experience in creating
+									interactive and engaging games using Unity and C#. From gameplay mechanics
+									to advanced animation, these projects demonstrate my skills in
+									programming and design.
+								</p>
+							</div>
+							<a
+								href="https://github.com/kawrae/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="nbj-dev-btn"
+							>
+								<i className="fab fa-github"></i> View on GitHub
+							</a>
+						</div>
+
+
+						<div className="builds-container">
+							<div className="builds-grid">
+								{/* 🔁 Builds */}
+								{builds.map((build, index) => (
+									<div className="build-card-style" key={index}>
+										<h3>{build.title}</h3>
+										<p className="release-date">
+											This build was released on{' '}
+											<span className="release-date-highlight">{build.releaseDate}</span>
+										</p>
+										<p>{build.description}</p>
+										<div className="meta">
+											<span><strong>VER:</strong> {build.version}</span>
+											<span><strong>Size:</strong> {build.size}</span>
+										</div>
+										<img
+											src={build.image}
+											alt={`${build.title} Screenshot`}
+											className="build-image"
+										/>
+										<button className="btn-download">
+											<i className="fas fa-download"></i> Download for Windows
+										</button>
+									</div>
+								))}
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default Portfolio;
