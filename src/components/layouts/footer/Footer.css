@@ -2,7 +2,6 @@
     width: 100%;
     position: relative;
     background-color: #17181c;
-    /* border-top: 1px solid #2e2e32; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -24,7 +23,6 @@
 
 .footer-primary-section {
     align-self: stretch;
-    border-top: 1px solid #2e2e32;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -33,7 +31,7 @@
     padding: 0px 108px;
     text-align: left;
     font-size: 10px;
-    color: #5bff09;
+    color: rgb(177, 121, 250);
 }
 .footer-primary-content {
     align-self: stretch;
