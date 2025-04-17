@@ -1,6 +1,16 @@
 import React from 'react';
+import windowsIcon from '../../assets/icons/windows-icon.png';
+
 import nbj1 from '../../assets/images/showcase/nbj1.png';
+import nbj2 from '../../assets/images/showcase/nbj2.png';
+import nbj3 from '../../assets/images/showcase/nbj3.png';
+import nbj4 from '../../assets/images/showcase/nbj4.png';
+import nbj5 from '../../assets/images/showcase/nbj5.png';
+
+
 import game2 from '../../assets/images/showcase/game2.png';
+import game3 from '../../assets/images/showcase/game2.png';
+
 import useWaveAnimation from '../../hooks/useWaveAnimation.js';
 import gamepadIcon from '../../assets/images/other/gamepad.png';
 import blogScreenshot from '../../assets/images/showcase/project-blog.png';
@@ -8,6 +18,10 @@ import portfolioScreenshot from '../../assets/images/showcase/portfolio2024.png'
 import currentPortfolioScreenshot from '../../assets/images/showcase/portfolio2025.png';
 import cartScreenshot from '../../assets/images/showcase/wst-project.png';
 import CallToAction from '../../components/layouts/call-to-action/CallToAction';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 import './Portfolio.css';
 
@@ -19,7 +33,7 @@ const builds = [
 		size: '1023.3 MB',
 		description:
 			'Horror Game Alpha V1.0 is an immersive first-person horror experience built in Unity and C#. Explore eerie environments, encounter jumpscares, and navigate through dark, atmospheric levels in this alpha release.',
-		image: nbj1,
+		images: [nbj1, nbj2, nbj3, nbj4, nbj5],
 		link: '#',
 	},
 	{
@@ -29,7 +43,7 @@ const builds = [
 		size: '519.7 MB',
 		description:
 			'Free Roam Game Project is an open-world prototype focused on car physics, player movement, and exploration. Inspired by the Grand Theft Auto series, it offers a realistic sandbox for driving and interaction.',
-		image: game2,
+		images: [game2, game3],
 		link: '#',
 	},
 ];
@@ -92,9 +106,23 @@ const Portfolio = () => {
 										<span className="meta-tag"><strong>Size:</strong> {build.size}</span>
 									</div>
 
-									<img src={build.image} alt={`${build.title} Screenshot`} className="build-image" />
+									<Swiper
+										modules={[Navigation]}
+										navigation
+										spaceBetween={10}
+										slidesPerView={1}
+										className="build-carousel"
+									>
+										{build.images.map((img, idx) => (
+											<SwiperSlide key={idx}>
+												<img src={img} alt={`${build.title} Screenshot ${idx + 1}`} className="build-image" />
+											</SwiperSlide>
+										))}
+									</Swiper>
+
 									<button className="btn-download">
-										<i className="fas fa-download"></i> Download for Windows
+										<img src={windowsIcon} alt="Windows Icon" className="windows-icon" />
+										Download for Windows
 									</button>
 								</div>
 							))}

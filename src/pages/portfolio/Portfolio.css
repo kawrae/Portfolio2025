@@ -372,13 +372,37 @@
 	text-align: center;
 	text-decoration: none;
 	transition: background 0.3s ease;
+    border: 1px solid rgb(255 255 255 / 20%);
+
 }
 
 .btn-demo:hover {
 	background: linear-gradient(-135deg,rgb(46,204,113) 25%,rgb(26,188,156) 100%);
 }
 
+.build-carousel {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #b1b3be;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    transform: scale(0.75);
+  }
 
+  .windows-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
 /* Responsive styling */
 @media (max-width: 768px) {
 	.nbj-dev-card {
