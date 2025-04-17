@@ -1,1 +1,3 @@
-# infinitusinteractive.com
+# corey black
+
+personal portfolio
