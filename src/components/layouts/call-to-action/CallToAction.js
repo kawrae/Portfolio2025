@@ -20,14 +20,9 @@ const CallToAction = ({ titleBeforeBold, boldTitle, titleAfterBold, description 
                     {description}
                 </div>
                 <div className="cta-button-row">
-                    <MainButton
-                        variant="white"
-                        text={"Connect with us"}
-                        onClick={() => openModal("")}
-                    />
                     <MainButton 
                         variant="black"
-                        text={"Explore our work"}
+                        text={"Explore work"}
                         onClick={shortcutToWork}
                     />
                 </div>
