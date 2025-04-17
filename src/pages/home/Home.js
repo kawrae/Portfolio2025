@@ -9,13 +9,10 @@ import QuoteCarousel from '../../components/sections/quote-carousel/QuoteCarouse
 import CallToAction from '../../components/layouts/call-to-action/CallToAction';
 
 const services = [
-    'Digital Twins',
-    'Augmented Reality',
-    'Virtual Reality',
-    'Custom Development',
-    'Websites',
-    'Games',
-    'Apps'
+    'React & Front-End Design',
+    'Java & Kotlin Mobile Apps',
+    'Custom PHP & MySQL Solutions',
+    'JavaScript / TypeScript Projects',
 ];
 
 const Home = () => {
@@ -30,10 +27,9 @@ const Home = () => {
                 <QuoteCarousel entries={clientQuotes} />
             </div>
             <CallToAction 
-                titleBeforeBold={"Begin your"}
-                boldTitle={"journey"}
-                titleAfterBold={"today"}
-                description={"Wherever your journey leads, we’ll provide the solutions to help you succeed."}
+                titleBeforeBold={"Aspiring"}
+                boldTitle={"Full Stack Developer"}
+                description={"Currently Enrolled in BSCHNS - Web and Mobile Development"}
             />
         </div>
     );
