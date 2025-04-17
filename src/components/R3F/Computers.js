@@ -53,9 +53,9 @@ export function Computers(props) {
 		// Darken the model
 		modelRef.current.traverse((child) => {
 			if (child.isMesh && child.material) {
-				child.material.color.multiplyScalar(0.8);
-				child.material.roughness = 0.9;
-				child.material.metalness = 0.5;
+				child.material.color.multiplyScalar(0.9);
+				child.material.roughness = 0;
+				child.material.metalness = 0;
 			}
 		});
 	}, []);

@@ -3,6 +3,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { BakeShadows, MeshReflectorMaterial } from '@react-three/drei';
 import { EffectComposer, Bloom, DepthOfField } from '@react-three/postprocessing';
 import { easing } from 'maath';
+import { Grayscale } from '@react-three/postprocessing';
+import { HueSaturation } from '@react-three/postprocessing';
+
 
 import styles from './R3F.module.css';
 import { Instances, Computers } from './Computers';
@@ -39,7 +42,7 @@ function EnvironmentLights() {
 			<ambientLight intensity={0.05} color="#2a2a2a" />
 			<directionalLight
 				position={[5, 10, 10]}
-				intensity={0.2}
+				intensity={0.4}
 				color="#445566"
 				castShadow
 				shadow-mapSize={[1024, 1024]}
@@ -54,9 +57,10 @@ function PostFX() {
 		<EffectComposer disableNormalPass>
 			<Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={1.0} intensity={1} />
 			<DepthOfField target={[0, , 13]} focalLength={.5} bokehScale={15} height={700} />
+			<HueSaturation saturation={-1} />
 		</EffectComposer>
 	);
-};
+}
 
 function CameraRig() {
 	useFrame((state, delta) => {
@@ -120,9 +124,9 @@ function TerminalTyper({ onComplete }) {
 	const [charIndex, setCharIndex] = useState(0);
 	const [showFinal, setShowFinal] = useState(false);
 
-	const staticLine = '[ corey black ]';
+	const staticLine = '';
 	const transientLines = [
-		'> loading 3D scene... OK'
+		'> loading 3D scene...'
 	];
 	const finalLine = '> status: LIVE';
 
