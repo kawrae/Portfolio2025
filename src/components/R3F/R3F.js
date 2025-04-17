@@ -93,9 +93,6 @@ function Overlay({ onComplete }) {
 	return (
 		<>
 			<div className={styles.overlay}>
-				<a href="https://infinitusinteractive.com/" className={styles.link}>
-					infinitus<br />interactive
-				</a>
 				<TerminalTyper onComplete={onComplete} />
 				<div className={styles.topRight}>
 					{formatted}
