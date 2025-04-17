@@ -12,10 +12,10 @@ const FeaturedProjects = () => {
 		<section className="featured-projects">
 		<div className="featured-content">
 			<div className="featured-title">
-				Our <b>leading</b> projects
+				Personal Portfolio development projects
 			</div>
 			<p className="featured-subheading">
-				Real-world applications of our cutting-edge digital twin projects.
+				{/* Real-world applications of our cutting-edge digital twin projects. */}
 			</p>
 			<div className="project-grid">
 				{featuredProjects.map((project, idx) => (
