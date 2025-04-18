@@ -194,7 +194,7 @@ const Portfolio = () => {
 													: isThird
 														? 'Personal Project'
 														: isSecond
-															? 'University Coursework'
+															? 'University Project'
 															: 'Personal Project'}
 											</h4>
 											<h3 className="tile-title">
