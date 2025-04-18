@@ -306,14 +306,63 @@
 
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .value-box {
+        padding: 20px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .about-card.with-avatar {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    .avatar-img {
+        position: static;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 15px;
+    }
+
+    .company-about {
+        max-width: 90%;
+        padding: 15px 10px;
+    }
+
+    .company-hero {
+        padding: 40px 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
     }
 
     .cta-buttons {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
     }
 }
+
 
 .company-content-container {
 	margin: 0 auto;

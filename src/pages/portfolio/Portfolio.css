@@ -446,4 +446,18 @@ h3 {
 	.nbj-dev-btn {
 		margin-top: 15px;
 	}
+
+	.portfolio-content-container {
+		flex-direction: column;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 90%;
+	}
+
+	.btn-download a {
+		margin: 0 auto;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
 }

@@ -57,15 +57,6 @@ const Navbar = () => {
 
 				{/* CTA Button */}
 				<div className="navbar-right">
-					<div className="navbar-cta-mobile">
-						<LucideButton
-							className="navbar-cta-mobile"
-							icon={Send}
-							buttonSize={35}
-							onClick={() => setShowConnect(true)}
-							variant="primary"
-						/>
-					</div>
 				</div>
 
 				{/* Mobile Menu Icon */}
@@ -73,7 +64,6 @@ const Navbar = () => {
 					{menuOpen ? <X size={28} /> : <Menu size={28} />}
 				</div>
 			</div>
-			{showConnect && <ConnectModal onClose={() => setShowConnect(false)} />}
 		</>
 	);
 };
