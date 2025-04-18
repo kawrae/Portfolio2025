@@ -176,4 +176,24 @@
     }
   }
   
+  @media (max-width: 768px) {
+    body.menu-open {
+      overflow-x: hidden;
+    }
+  
+    .navbar-centre.active {
+      overflow-x: hidden;
+    }
+  
+    .navbar-centre {
+      box-sizing: border-box;
+      width: 100vw;
+      left: 0;
+      right: 0;
+    }
+  
+    .navitem-text {
+      word-break: break-word;
+    }
+  }
   

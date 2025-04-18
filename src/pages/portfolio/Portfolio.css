@@ -436,6 +436,7 @@ h3 {
 	.nbj-dev-card {
 		flex-direction: column;
 		text-align: center;
+		max-width: 100%;
 	}
 
 	.nbj-dev-icon {

@@ -304,6 +304,14 @@
     line-height: 1.7;
 }
 
+@media (max-width: 768px) {
+	.about-card.with-avatar .text-content {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  text-align: center;
+	}
+  }
 
 @media (max-width: 768px) {
     .about-cards-grid {
@@ -314,12 +322,17 @@
 
     .value-box {
         padding: 20px;
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto;
     }
 
     .values-grid {
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 0 15px;
+		margin: 0 auto;
+		width: 110%;
     }
 
     .about-card.with-avatar {
