@@ -4,6 +4,7 @@ import CallToAction from '../../components/layouts/call-to-action/CallToAction';
 import { useConnectModal } from '../../context/ConnectModalContext';
 import { useShortcut } from '../../context/ShortcutContext';
 import useWaveAnimation from '../../hooks/useWaveAnimation.js';
+import meImage from '../../assets/images/other/me.png';
 
 const Company = () => {
     const { openModal } = useConnectModal();
@@ -29,11 +30,15 @@ const Company = () => {
                             <h2 style={{ marginBottom: '0px' }}>About Me & Infinitus Interactive</h2>
                         </div>
 
-                        {/* <div className="about-highlight-card">
-                            <p>
-                                I’m a passionate Full Stack Developer currently completing my BSc (Hons) in Web & Mobile Development. As a proud contributor to Infinitus Interactive — my brother's innovative tech company — I specialize in building immersive, functional, and visually engaging digital experiences across web, mobile, and AR platforms.
-                            </p>
-                        </div> */}
+                        <div className="about-card with-avatar" id="aboutTop">
+                            <img src={meImage} alt="Corey Black Avatar" className="avatar-img" />
+                            <div className="text-content">
+                                <h3><i className="fas fa-user"></i>Corey Black</h3>
+                                <p>
+                                    I am a passionate <strong>Full Stack Developer</strong> with a diverse skill set in front-end, back-end, and mobile technologies. My aim is to deliver high-quality digital solutions that merge both functionality and aesthetics.
+                                </p>
+                            </div>
+                        </div>
 
                         <div className="about-cards-grid">
                             <div className="about-card">
@@ -78,7 +83,7 @@ const Company = () => {
                     <section className="company-hero">
                         <div className="hero-content">
                             <h1 className="hero-title">
-                                From <span>student</span> to <span>industry innovator</span>
+                                Developer at <span>Infinitus Interactive</span>
                             </h1>
                             <p className="hero-subtitle">
                                 Currently completing my BSc (Hons) Web & Mobile Development at university, I'm proud to join the talented team at <strong>Infinitus Interactive</strong> — a cutting-edge digital solutions studio founded by Dylan Black. We create immersive environments, AR tools, and next-gen developer experiences.
@@ -95,15 +100,27 @@ const Company = () => {
                         <div className="values-grid">
                             <div className="value-box">
                                 <h3>Empowering Developers</h3>
-                                <p>We build tools that help developers thrive in the digital age — whether they're indie coders or enterprise teams.</p>
+                                <p>We craft developer-first tools and frameworks that simplify workflows, support learning, and fuel creativity in tech communities.</p>
                             </div>
                             <div className="value-box">
                                 <h3>Immersive Technology</h3>
-                                <p>From AR to real-time 3D environments, we create experiences that feel alive, connected, and forward-thinking.</p>
+                                <p>From AR overlays to 3D digital twins, we design experiences that push the boundaries of what's possible in real-time environments.</p>
                             </div>
                             <div className="value-box">
                                 <h3>Rooted in Collaboration</h3>
-                                <p>As brothers building together, we believe in long-term, meaningful partnerships that grow with every project.</p>
+                                <p>Built by brothers, powered by vision. Our approach is grounded in shared goals, transparency, and building long-term partnerships.</p>
+                            </div>
+                            <div className="value-box">
+                                <h3>Creative Innovation</h3>
+                                <p>We believe in creative experimentation — prototyping new concepts that blur the line between function and imagination.</p>
+                            </div>
+                            <div className="value-box">
+                                <h3>Future-Ready Design</h3>
+                                <p>Every project is engineered to scale with future trends in AI, XR, and the evolving digital landscape.</p>
+                            </div>
+                            <div className="value-box">
+                                <h3>Human-Centered Outcomes</h3>
+                                <p>At the heart of all we do is people — ensuring the tech we build is meaningful, inclusive, and intuitive for everyone.</p>
                             </div>
                         </div>
                     </section>
@@ -112,7 +129,9 @@ const Company = () => {
                         titleBeforeBold="Ready to build with"
                         boldTitle="Infinitus?"
                         description="We’re always exploring new possibilities — from collaborations to full-stack digital solutions. Let’s build something meaningful together."
+                        buttonLink="https://dev.infinitusinteractive.com/portfolio#work"
                     />
+
                 </div>
             </div>
         </>

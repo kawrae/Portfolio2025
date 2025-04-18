@@ -180,6 +180,7 @@
 .company-values {
     background: #0f0f13;
     padding: 80px 20px;
+	margin: 0 auto;
 }
 
 .company-values h2 {
@@ -190,9 +191,11 @@
 
 .values-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	gap: 30px;
 	margin-top: 40px;
+	max-width: 75%;
+	margin: 0 auto;
 }
 
 .value-box {
@@ -263,6 +266,45 @@
 	z-index: 1;
 }
 
+/* about avatar */
+.about-card.with-avatar {
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    padding-right: 160px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar-img {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    border: 2px solid #1e3deb77;
+}
+
+.with-avatar .text-content {
+    max-width: 100%;
+}
+
+.with-avatar h3 {
+    color: #1e3deb;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.with-avatar p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
@@ -277,4 +319,10 @@
 	margin: 0 auto;
 	background: #f9f9f9;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 992px) {
+	.values-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
