@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './ConnectModal.css';
 
-import emailjs from 'emailjs-com';
 
 import DesktopButton from '../../../common/button/main/MainButton';
 import { IconButton } from '../../../common/button/circle/CircleButton';
@@ -22,15 +21,16 @@ const ConnectModal = ({ onClose, defaultMessage = '' }) => {
 
 	const validate = () => {
 		const errs = {};
-		if (!formData.name.trim()) errs.name = 'Name is required.';
-		if (!formData.email.trim()) {
+		if (typeof formData.name !== 'string' || !formData.name.trim()) errs.name = 'Name is required.';
+		if (typeof formData.email !== 'string' || !formData.email.trim()) {
 			errs.email = 'Email is required.';
 		} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
 			errs.email = 'Invalid email.';
 		}
-		if (!formData.message.trim()) errs.message = 'Message is required.';
+		if (typeof formData.message !== 'string' || !formData.message.trim()) errs.message = 'Message is required.';
 		return errs;
 	};
+	
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -40,43 +40,49 @@ const ConnectModal = ({ onClose, defaultMessage = '' }) => {
 
 		setSending(true);
 
-		emailjs.sendForm(
-		process.env.REACT_APP_SERVICE_ID,
-		process.env.REACT_APP_TEMPLATE_ID,
-		formRef.current,
-		process.env.REACT_APP_USER_ID,
-		).then(
-			(result) => {
-				console.log(result.text);
-				setSuccess(true);
-				setSending(false);
-				setFormData({ name: '', email: '', message: '' });
-				setTimeout(() => {
-				setSuccess(false);
-				onClose();
-				}, 2000);
+		fetch('http://localhost:5000/api/send-email', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
 			},
-			(error) => {
-				console.log(error.text);
+			body: JSON.stringify(formData),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.success) {
+					setSuccess(true);
+					setSending(false);
+					setFormData({ name: '', email: '', message: '' });
+					setTimeout(() => {
+						setSuccess(false);
+						onClose();
+					}, 2000);
+				} else {
+					throw new Error('Email send failed');
+				}
+			})
+			.catch((err) => {
+				console.error(err);
 				setSending(false);
 				alert('Failed to send message. Please try again.');
-			}
-		);
+			});
 	};
 
 	const handleChange = (e) => {
-		setFormData(prev => ({
-		...prev,
-		[e.target.name]: e.target.value,
-		}));
+		const updated = {
+			...formData,
+			[e.target.name]: e.target.value,
+		};
+		console.log('formData update:', updated);
+		setFormData(updated);
 	};
 
 	return (
 		<div className="modal-overlay">
 			<div className="connect-form">
 				<div className="close-button">
-					<IconButton  onClick={onClose} image={closeIcon} imageAlt={"Close"} buttonSize={40} iconSize={10} />
-				</div>				
+					<IconButton onClick={onClose} image={closeIcon} imageAlt={"Close"} buttonSize={40} iconSize={10} />
+				</div>
 				<div className="form">
 					<div className="intro">
 						<h3 style={{ color: '#7c72ea' }}>
@@ -96,11 +102,10 @@ const ConnectModal = ({ onClose, defaultMessage = '' }) => {
 
 						<input
 							type="email"
-							name="email_address"
+							name="email"
 							placeholder="My email is"
 							value={formData.email}
-							onChange={(e) =>
-							setFormData(prev => ({ ...prev, email: e.target.value }))}
+							onChange={handleChange}
 						/>
 						{errors.email && <div className="form-error">{errors.email}</div>}
 
