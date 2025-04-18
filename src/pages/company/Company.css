@@ -323,17 +323,20 @@
     .value-box {
         padding: 20px;
         width: 100%;
-        max-width: 95%;
+        max-width: 90%;
         margin: 0 auto;
     }
 
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 15px;
-		margin: 0 auto;
-		width: 110%;
-    }
+	.values-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		width: 90%;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 !important;
+		box-sizing: border-box;
+	  }
 
     .about-card.with-avatar {
         flex-direction: column;
