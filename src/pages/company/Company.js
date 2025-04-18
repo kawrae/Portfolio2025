@@ -43,40 +43,53 @@ const Company = () => {
                         <div className="about-cards-grid">
                             <div className="about-card">
                                 <h3>💻 Front-End Expertise</h3>
-                                <p>I specialize in developing responsive, intuitive user interfaces using:</p>
+                                <p>
+                                    I specialize in developing responsive user interfaces using modern JavaScript libraries and design principles. My focus is on creating clean web pages that adapt across devices and screen sizes.
+                                </p>
                                 <ul>
-                                    <li><span className="emoji">💡</span> <strong>React, JavaScript</strong> – Building dynamic and accessible web pages.</li>
-                                    <li><span className="emoji">🎨</span> <strong>UI/UX Design</strong> – Crafting visually engaging user experiences.</li>
+                                    <li><span className="emoji">💡</span> <strong>React, JavaScript</strong> – Building dynamic and accessible web pages with reusable components.</li>
+                                    <li><span className="emoji">🎨</span> <strong>UI/UX Design</strong> – Crafting visually engaging and user-friendly experiences, using Figma and accessibility-first design thinking.</li>
+                                    <li><span className="emoji">🧪</span> <strong>Testing</strong> – Ensuring stable releases through unit testing (Jest) and responsive cross-browser testing.</li>
                                 </ul>
                             </div>
 
                             <div className="about-card">
                                 <h3>🎮 Game Development</h3>
-                                <p>My background in <strong>C#</strong> and <strong>Unity</strong> allows me to creatively approach challenges:</p>
+                                <p>
+                                    My background in game development allows me to engineer immersive, interactive experiences using Unity and C#. I specialize in physics-based mechanics, UI design, and level-building.
+                                </p>
                                 <ul>
-                                    <li><span className="emoji">💡</span> <strong>Creative Problem Solving</strong> – Applying game design principles to coding problems.</li>
-                                    <li><span className="emoji">🧠</span> <strong>Efficient Code Optimization</strong> – Writing performant, responsive systems.</li>
+                                    <li><span className="emoji">💡</span> <strong>Creative Problem Solving</strong> – Applying game logic and systemic design to code challenges.</li>
+                                    <li><span className="emoji">🧠</span> <strong>Efficient Code Optimization</strong> – Writing scalable update loops and memory-conscious gameplay logic.</li>
+                                    <li><span className="emoji">🎬</span> <strong>Animation & Interaction</strong> – Implementing timelines, player feedback systems, and interactive UI.</li>
                                 </ul>
                             </div>
 
                             <div className="about-card">
                                 <h3>📱 Mobile Development</h3>
-                                <p>I have hands-on experience developing mobile apps using:</p>
+                                <p>
+                                    I build responsive and performant mobile applications using Android Studio with Java and Kotlin. My apps are designed to be smooth, accessible, and user-centric.
+                                </p>
                                 <ul>
-                                    <li><span className="emoji">📱</span> <strong>Java & Kotlin</strong> – Building high-performance native apps using Android Studio.</li>
-                                    <li><span className="emoji">🔁</span> <strong>Responsive UI/UX Design</strong> – Seamless experiences across all screen sizes.</li>
+                                    <li><span className="emoji">📱</span> <strong>Java & Kotlin</strong> – Developing high-performance native applications with Material Design UI.</li>
+                                    <li><span className="emoji">🔁</span> <strong>Responsive UI/UX Design</strong> – Designing scalable layouts with XML and Jetpack Compose.</li>
+                                    <li><span className="emoji">🧰</span> <strong>Firebase & APIs</strong> – Integrating real-time data sync, authentication, and cloud storage.</li>
                                 </ul>
                             </div>
 
                             <div className="about-card">
                                 <h3>🗄️ Back-End Expertise</h3>
-                                <p>I am proficient in database management and secure back-end development:</p>
+                                <p>
+                                    I design secure, scalable, and maintainable back-end solutions using modern PHP and SQL practices. From user auth to admin dashboards, I build efficient full-stack systems.
+                                </p>
                                 <ul>
-                                    <li><span className="emoji">🗃️</span> <strong>SQL & PHP</strong> – Managing robust databases and handling APIs requests.</li>
-                                    <li><span className="emoji">🔐</span> <strong>Security</strong> – Developing secure applications with built-in admin panels, and protected routes for managing data.</li>
+                                    <li><span className="emoji">🗃️</span> <strong>SQL & PHP</strong> – Managing robust databases, crafting REST APIs, and optimizing query performance.</li>
+                                    <li><span className="emoji">🔐</span> <strong>Security</strong> – Implementing session-based auth, data validation, and secure form handling.</li>
+                                    <li><span className="emoji">🧩</span> <strong>Modular Code</strong> – Building reusable server components and integrating third-party services.</li>
                                 </ul>
                             </div>
                         </div>
+
                     </section>
 
 

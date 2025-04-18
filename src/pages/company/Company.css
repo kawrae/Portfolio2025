@@ -65,7 +65,7 @@
 }
 
 .company-about {
-    max-width: 55%;
+    max-width: 65%;
     margin: 0 auto;
 	border-radius: 20px;
 	margin-bottom: 40px;
@@ -270,7 +270,7 @@
 .about-card.with-avatar {
     position: relative;
     padding: 0px 0px 0px 30px;
-    padding-right: 160px;
+    padding-right: 200px;
     min-height: 180px;
     display: flex;
     align-items: center;
