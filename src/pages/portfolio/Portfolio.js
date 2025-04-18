@@ -1,16 +1,25 @@
 import React from 'react';
 import windowsIcon from '../../assets/icons/windows-icon.png';
 
+// Souls like images
+import soulsGameImg1 from '../../assets/images/showcase/soulslike1.png';
+import soulsGameImg2 from '../../assets/images/showcase/soulslike2.png';
+import soulsGameImg3 from '../../assets/images/showcase/soulslike3.png';
+import soulsGameImg4 from '../../assets/images/showcase/soulslike4.png';
+import soulsGameImg5 from '../../assets/images/showcase/soulslike5.png';
+
+// Horror game images
 import nbj1 from '../../assets/images/showcase/nbj1.png';
 import nbj2 from '../../assets/images/showcase/nbj2.png';
 import nbj3 from '../../assets/images/showcase/nbj3.png';
 import nbj4 from '../../assets/images/showcase/nbj4.png';
 import nbj5 from '../../assets/images/showcase/nbj5.png';
 
-
+// Free roam images
 import game2 from '../../assets/images/showcase/game2.png';
-import game3 from '../../assets/images/showcase/game2.png';
+import game3 from '../../assets/images/showcase/game3.png';
 
+// Imports
 import useWaveAnimation from '../../hooks/useWaveAnimation.js';
 import gamepadIcon from '../../assets/images/other/gamepad.png';
 import blogScreenshot from '../../assets/images/showcase/project-blog.png';
@@ -27,6 +36,16 @@ import './Portfolio.css';
 
 const builds = [
 	{
+		title: 'Souls-like Prototype',
+		releaseDate: 'In Development',
+		version: '0.0.1',
+		size: '951.3 MB',
+		description:
+			'A passion project inspired by Soulsborne mechanics. This prototype focuses on third-person melee combat, stamina-based dodging, lock-on targeting, and immersive player-driven exploration. Built with Unity and C#.',
+		images: [soulsGameImg1, soulsGameImg2, soulsGameImg3, soulsGameImg4, soulsGameImg5],
+		link: 'https://www.mediafire.com/file/v75tj61a2saanu2/DS4.zip/file',
+	},
+	{
 		title: 'NBJ Horror Story',
 		releaseDate: '10-02-2024',
 		version: '1.0.0',
@@ -34,7 +53,7 @@ const builds = [
 		description:
 			'Horror Game Alpha V1.0 is an immersive first-person horror experience built in Unity and C#. Explore eerie environments, encounter jumpscares, and navigate through dark, atmospheric levels in this alpha release.',
 		images: [nbj1, nbj2, nbj3, nbj4, nbj5],
-		link: '#',
+		link: 'https://www.mediafire.com/file/wr56nglsllpa2qq/NASTYBJ_HorrorGame.zip/file',
 	},
 	{
 		title: 'NBJ Free Roam',
@@ -44,8 +63,8 @@ const builds = [
 		description:
 			'Free Roam Game Project is an open-world prototype focused on car physics, player movement, and exploration. Inspired by the Grand Theft Auto series, it offers a realistic sandbox for driving and interaction.',
 		images: [game2, game3],
-		link: '#',
-	},
+		link: 'https://www.mediafire.com/file/oicujy796c0w37v/FreeRoam_GameProject.zip/file',
+	}
 ];
 
 const Portfolio = () => {
@@ -98,7 +117,7 @@ const Portfolio = () => {
 								<div className="build-card-style" key={index}>
 									<h3>{build.title}</h3>
 									<p className="release-date">
-										Released on <span className="release-date-highlight">{build.releaseDate}</span>
+										Release: <span className="release-date-highlight">{build.releaseDate}</span>
 									</p>
 									<p>{build.description}</p>
 									<div className="meta">
@@ -120,10 +139,10 @@ const Portfolio = () => {
 										))}
 									</Swiper>
 
-									<button className="btn-download">
+									<a href={build.link} target="_blank" rel="noopener noreferrer" className="btn-download">
 										<img src={windowsIcon} alt="Windows Icon" className="windows-icon" />
 										Download for Windows
-									</button>
+									</a>
 								</div>
 							))}
 						</div>

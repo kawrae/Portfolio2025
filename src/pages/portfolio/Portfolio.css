@@ -59,7 +59,7 @@ h3 {
 
 .builds-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 	gap: 30px;
 	margin-top: 20px;
 }
@@ -70,7 +70,7 @@ h3 {
 }
 
 .portfolio-content-container {
-	max-width: 55%;
+	max-width: 65%;
 	margin: 0 auto;
 	border-radius: 20px;
 	padding: 15px 40px;
