@@ -36,8 +36,8 @@ const Footer = () => {
 							<div className="column">
 								<div className="column-title">Corey Black</div>
 								<div className="footer-primary-row-list">
-									<a href="https://pipelinesentry.com/" target="_blank" rel="noopener noreferrer" className="footer-primary-row-list-item hover-effect">
-										Aspring Full Stack Developer
+									<a href="/company" rel="noopener noreferrer" className="footer-primary-row-list-item hover-effect">
+										Aspiring Full Stack Developer
 									</a>
 								</div>
 							</div>
