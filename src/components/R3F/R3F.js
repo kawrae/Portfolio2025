@@ -4,6 +4,7 @@ import { BakeShadows, MeshReflectorMaterial } from '@react-three/drei';
 import { EffectComposer, Bloom, DepthOfField } from '@react-three/postprocessing';
 import { easing } from 'maath';
 import { Grayscale } from '@react-three/postprocessing';
+import { BrightnessContrast, Vignette } from '@react-three/postprocessing';
 import { HueSaturation } from '@react-three/postprocessing';
 
 
@@ -37,13 +38,13 @@ function Scene({ bootComplete }) {
 function EnvironmentLights() {
 	return (
 		<>
-			<color attach="background" args={['#0a0a0a']} />
-			<fog attach="fog" args={['#0a0a0a', 10, 30]} />
-			<ambientLight intensity={0.05} color="#2a2a2a" />
+			<color attach="background" args={['#000']} />
+			<fog attach="fog" args={['#050505', 8, 25]} />
+			<ambientLight intensity={0.02} color="#1a1a1a" />
 			<directionalLight
 				position={[5, 10, 10]}
-				intensity={0.4}
-				color="#445566"
+				intensity={0.25} // reduced
+				color="#334455" // cooler/dimmer tone
 				castShadow
 				shadow-mapSize={[1024, 1024]}
 			/>
@@ -55,9 +56,11 @@ function EnvironmentLights() {
 function PostFX() {
 	return (
 		<EffectComposer disableNormalPass>
-			<Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={1.0} intensity={1} />
+			<Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={1.0} intensity={.5} />
 			<DepthOfField target={[0, , 13]} focalLength={.5} bokehScale={15} height={700} />
 			<HueSaturation saturation={-1} />
+			<BrightnessContrast brightness={-0.3} contrast={0} />
+			<Vignette eskil={false} offset={0.1} darkness={1.1} />
 		</EffectComposer>
 	);
 }

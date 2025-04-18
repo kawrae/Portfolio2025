@@ -40,38 +40,33 @@ export function Instances({ children, ...props }) {
 export function Computers(props) {
 	const instances = useContext(context);
 	const modelRef = useRef();
-	const darkenedOnce = useRef(false);
 
 
 	useLayoutEffect(() => {
 		if (!modelRef.current) return;
-
-		// Center the model
-		const box = new THREE.Box3().setFromObject(modelRef.current);
+	
+		const model = modelRef.current;
+	
+		const box = new THREE.Box3().setFromObject(model);
 		const center = new THREE.Vector3();
 		box.getCenter(center);
-		modelRef.current.position.sub(center);
-
-		// Darken the model
-
-		if (!darkenedOnce.current) {
-			modelRef.current.traverse((child) => {
-				if (child.isMesh && child.material && child.material.color) {
-					child.material.color.multiplyScalar(0.85);
-					child.material.roughness = 0.5;
-					child.material.metalness = 0.2;
-				}
-			});
-			darkenedOnce.current = true;
-		}
-
+		model.position.sub(center);
+	
+		model.traverse((child) => {
+			if (child.isMesh && child.material && child.material.color) {
+				child.material = child.material.clone();
+				child.material.color.multiplyScalar(0.85);
+				child.material.roughness = 0.5;
+				child.material.metalness = 0.2;
+			}
+		});
 	}, []);
 
 	return (
 		<group {...props} dispose={null}>
 			<primitive
 				ref={modelRef}
-				object={instances.NotreDame}
+				object={useMemo(() => instances.NotreDame.clone(true), [instances])}
 				scale={4.5}
 				rotation={[0, -Math.PI / 2, 0]}
 				position={[0, 0, 0]}
