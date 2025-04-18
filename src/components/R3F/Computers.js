@@ -40,6 +40,8 @@ export function Instances({ children, ...props }) {
 export function Computers(props) {
 	const instances = useContext(context);
 	const modelRef = useRef();
+	const darkenedOnce = useRef(false);
+
 
 	useLayoutEffect(() => {
 		if (!modelRef.current) return;
@@ -51,13 +53,18 @@ export function Computers(props) {
 		modelRef.current.position.sub(center);
 
 		// Darken the model
-		modelRef.current.traverse((child) => {
-			if (child.isMesh && child.material) {
-				child.material.color.multiplyScalar(0.9);
-				child.material.roughness = 0;
-				child.material.metalness = 0;
-			}
-		});
+
+		if (!darkenedOnce.current) {
+			modelRef.current.traverse((child) => {
+				if (child.isMesh && child.material && child.material.color) {
+					child.material.color.multiplyScalar(0.85);
+					child.material.roughness = 0.5;
+					child.material.metalness = 0.2;
+				}
+			});
+			darkenedOnce.current = true;
+		}
+
 	}, []);
 
 	return (
