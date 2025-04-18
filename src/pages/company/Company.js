@@ -89,8 +89,22 @@ const Company = () => {
                                 Currently completing my BSc (Hons) Web & Mobile Development at university, I'm proud to join the talented team at <strong>Infinitus Interactive</strong> — a cutting-edge digital solutions studio founded by Dylan Black. We create immersive environments, AR tools, and next-gen developer experiences.
                             </p>
                             <div className="cta-buttons">
-                                <button onClick={openModal} className="primary-btn">Let’s Talk</button>
-                                <button onClick={shortcutToWork} className="secondary-btn">View My Work</button>
+                                <a
+                                    href="https://infinitusinteractive.com/company"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="primary-btn"
+                                >
+                                    The Team
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/corey-black-92526532b/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="secondary-btn"
+                                >
+                                    LinkedIn
+                                </a>
                             </div>
                         </div>
                     </section>
