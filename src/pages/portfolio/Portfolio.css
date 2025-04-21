@@ -249,6 +249,10 @@ h3 {
 	min-width: 250px;
 }
 
+.nbj-dev-content p {
+	margin-right: 40px;
+}
+
 .nbj-dev-heading {
 	font-size: 24px;
 	color: #6366f1;
@@ -371,7 +375,7 @@ h3 {
 
 /* React */
 .badge-react {
-	border: 1.5px solid rgb(154, 3, 255)
+	border: 1.5px solid rgb(3, 175, 255)
 }
 
 /* Bootstrap */

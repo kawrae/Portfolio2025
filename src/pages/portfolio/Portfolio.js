@@ -41,7 +41,7 @@ const builds = [
 		version: '0.0.1',
 		size: '951.3 MB',
 		description:
-			'A passion project inspired by Soulsborne mechanics. This prototype focuses on third-person melee combat, stamina-based dodging, lock-on targeting, and immersive player-driven exploration. Built with Unity and C#.',
+			'A passion project inspired by Soulsborne mechanics. This prototype focuses on third-person melee combat, stamina-based dodging, lock-on targeting, and player-driven exploration. Built with Unity and C#.',
 		images: [soulsGameImg1, soulsGameImg2, soulsGameImg3, soulsGameImg4, soulsGameImg5],
 		link: 'https://www.mediafire.com/file/v75tj61a2saanu2/DS4.zip/file',
 	},
@@ -51,7 +51,7 @@ const builds = [
 		version: '1.0.0',
 		size: '1023.3 MB',
 		description:
-			'Horror Game Alpha V1.0 is an immersive first-person horror experience built in Unity and C#. Explore eerie environments, encounter jumpscares, and navigate through dark, atmospheric levels in this alpha release.',
+			'NBJ Horror Story is an immersive first-person horror experience built in Unity and C#. Featuring interactive objects, a full-scale inventory system, jump scare logic, and dynamic level-based problem solving challenges.',
 		images: [nbj1, nbj2, nbj3, nbj4, nbj5],
 		link: 'https://www.mediafire.com/file/wr56nglsllpa2qq/NASTYBJ_HorrorGame.zip/file',
 	},
@@ -61,7 +61,7 @@ const builds = [
 		version: '0.1.0',
 		size: '519.7 MB',
 		description:
-			'Free Roam Game Project is an open-world prototype focused on car physics, player movement, and exploration. Inspired by the Grand Theft Auto series, it offers a realistic sandbox for driving and interaction.',
+			'NBJ Free Roam is a rough open-world prototype I put together to experiment with basic car physics and player movement. More of a sandbox test than a polished game, but feel free to download it and have a mess around.',
 		images: [game2, game3],
 		link: 'https://www.mediafire.com/file/oicujy796c0w37v/FreeRoam_GameProject.zip/file',
 	}
@@ -98,8 +98,7 @@ const Portfolio = () => {
 									<i className="fas fa-code"></i> Built with Unity & C#
 								</h3>
 								<p>
-									These projects explore immersive gameplay mechanics, environments, and animation systems.
-									They represent my technical and creative skills in game development using Unity.
+								These projects focus on gameplay mechanics, environments, and animation systems. They reflect the time I’ve spent learning Unity and building up my skills through hands-on development.
 								</p>
 							</div>
 							{/* <a
@@ -228,14 +227,21 @@ const Portfolio = () => {
 														<span className="badge badge-css">CSS</span>
 														<span className="badge badge-bootstrap">Bootstrap</span>
 													</>
-												) : (
+												) : isSecond ? (
 													<>
-														<span className="badge badge-javascript">JavaScript</span>
 														<span className="badge badge-php">PHP</span>
 														<span className="badge badge-mysql">MySQL</span>
+														<span className="badge badge-javascript">JavaScript</span>
 													</>
-												)}
+												) : isFirst ? (
+													<>
+														<span className="badge badge-php">PHP</span>
+														<span className="badge badge-javascript">JavaScript</span>
+														<span className="badge badge-mysql">MySQL</span>
+													</>
+												) : null}
 											</div>
+
 											<div className="tile-actions">
 												<a
 													href={

@@ -29,7 +29,7 @@ const Home = () => {
             <CallToAction 
                 titleBeforeBold={"Aspiring"}
                 boldTitle={"Full Stack Developer"}
-                description={"Currently Enrolled in BSCHNS - Web and Mobile Development"}
+                description={"Currently Enrolled in Bsc (Hons) Web and Mobile Development"}
             />
         </div>
     );
